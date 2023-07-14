@@ -12,6 +12,7 @@ const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+
   useEffect(() => {
     const getTrendingMovies = async () => {
       try {
@@ -33,7 +34,7 @@ const HomePage = () => {
     };
 
     getTrendingMovies();
-  }, []);
+  }, [movies]);
 
   return (
     <div>
