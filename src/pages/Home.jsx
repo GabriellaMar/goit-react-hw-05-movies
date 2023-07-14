@@ -8,8 +8,6 @@ import { MoviesList } from "components/MoviesList/MoviesList";
 // const BASE_URL = 'https://api.themoviedb.org/3/trending/movie/day?';
 export const API_KEY = '5788acd6bec4b8c2fc2e238d02649a74';
 
-
-
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
