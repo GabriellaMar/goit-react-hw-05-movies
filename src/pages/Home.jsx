@@ -21,10 +21,18 @@ const HomePage = () => {
           params: {
             api_key: API_KEY,
           },
+
         });
-        setMovies(response.data.results);
-        console.log(movies)
-        // console.log(response.data.results); 
+
+        const latestMovies = response.data.results;
+        setMovies((prevMovies) => {
+       
+          if (JSON.stringify(prevMovies) !== JSON.stringify(latestMovies)) {
+            return latestMovies;
+          }
+          return prevMovies;
+        });
+        
       } catch (error) {
         setError(error.message);
         Notiflix.Notify.failure(error.message);
