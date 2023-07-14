@@ -34,7 +34,7 @@ const HomePage = () => {
     };
 
     getTrendingMovies();
-  }, [movies]);
+  },[]);
 
   return (
     <div>
